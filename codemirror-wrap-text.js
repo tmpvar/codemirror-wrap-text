@@ -20,7 +20,7 @@ function codemirrorWrapText(line, start, length, el) {
 
     if (c >= start) {
       offset = c - start;
-    } else if (text.length + c >= start) {
+    } else if (text.length + c >= start + length) {
       offset = start - c;
     } else {
       c += text.length;
@@ -28,7 +28,7 @@ function codemirrorWrapText(line, start, length, el) {
     }
 
     if (offset + length > text.length) {
-      throw new Error('wtf are you doing?')
+      throw new Error('crossing elements is illegal')
     }
 
     // offset starts at 0 -> length
@@ -55,6 +55,7 @@ function codemirrorWrapText(line, start, length, el) {
         el.textContent = text.substring(offset);
       }
     }
+    break;
   }
 
   return el;
