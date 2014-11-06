@@ -2,5 +2,30 @@
   "devDependencies": {
     "jsdom": "^1.2.0",
     "tape": "^3.0.2"
-  }
+  },
+  "name": "codemirror-wrap-text",
+  "version": "1.0.0",
+  "description": "wrap text at arbirary locations in a codemirror line",
+  "main": "codemirror-wrap-text.js",
+  "dependencies": {
+    "jsdom": "^1.2.0",
+    "tape": "^3.0.2"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tmpvar/codemirror-wrap-text.git"
+  },
+  "keywords": [
+    "codemirror",
+    "hack"
+  ],
+  "author": "Elijah Insua <tmpvar@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tmpvar/codemirror-wrap-text/issues"
+  },
+  "homepage": "https://github.com/tmpvar/codemirror-wrap-text"
 }
